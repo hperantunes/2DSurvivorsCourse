@@ -38,6 +38,6 @@ layer_0/tile_data = PackedInt32Array(1966127, 0, 4, 1900591, 393216, 3, 1835055,
 y_sort_enabled = true
 
 [node name="Player" parent="Entities" instance=ExtResource("1_2oc1a")]
-position = Vector2(304, 168)
+position = Vector2(357, 205)
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
