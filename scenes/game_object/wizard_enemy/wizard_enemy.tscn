@@ -34,6 +34,7 @@ health_component = NodePath("../HealthComponent")
 sprite = NodePath("../Visuals/Sprite2D")
 
 [node name="HurtboxComponent" type="Area2D" parent="." node_paths=PackedStringArray("health_component")]
+visible = false
 collision_layer = 0
 collision_mask = 4
 script = ExtResource("4_k3kni")
@@ -50,5 +51,6 @@ texture = ExtResource("1_fs376")
 offset = Vector2(0, -8)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_sfn0i")
