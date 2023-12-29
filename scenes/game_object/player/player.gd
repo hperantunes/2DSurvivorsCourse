@@ -51,7 +51,6 @@ func check_deal_damage():
 		return
 	health_component.damage(1)
 	damage_interval_timer.start()
-	print(health_component.current_health)
 	
 	
 func update_health_display():
@@ -72,6 +71,7 @@ func on_damage_interval_timer_timeout():
 	
 
 func on_health_changed():
+	GameEvents.emit_player_damaged()
 	update_health_display()
 	
 
