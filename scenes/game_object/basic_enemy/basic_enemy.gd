@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 @onready var visuals = $Visuals
 @onready var velocity_component = $VelocityComponent
+@onready var hit_random_audio_player_component = $HitRandomAudioPlayerComponent
+
+
+func _ready():
+	$HurtboxComponent.hit.connect(on_hit)
 
 
 func _process(_delta):
@@ -12,3 +17,6 @@ func _process(_delta):
 	if move_sign != 0:
 		visuals.scale = Vector2(-move_sign, 1)
 
+
+func on_hit():
+	hit_random_audio_player_component.play_random()
