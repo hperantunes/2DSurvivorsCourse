@@ -53,4 +53,4 @@ func on_mouse_entered():
 	if disabled:
 		return
 		
-	$HoverAnimationPlaner.play("hover")
+	$HoverAnimationPlayer.play("hover")
