@@ -1,10 +1,12 @@
 extends CanvasLayer
 
 var options_scene = preload("res://scenes/ui/options_menu.tscn")
+var upgrades_scene = preload("res://scenes/ui/upgrade_screen.tscn")
 
 
 func _ready():
 	$%PlayButton.pressed.connect(on_play_button_pressed)
+	$%UpgradesButton.pressed.connect(on_upgrades_button_pressed)
 	$%OptionsButton.pressed.connect(on_options_button_pressed)
 	$%QuitButton.pressed.connect(on_quit_button_pressed)
 
@@ -13,6 +15,12 @@ func on_play_button_pressed():
 	ScreenTransition.transition()
 	await ScreenTransition.transitioned_halfway
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+
+
+func on_upgrades_button_pressed():
+	ScreenTransition.transition()
+	await ScreenTransition.transitioned_halfway
+	get_tree().change_scene_to_file("res://scenes/ui/meta_menu.tscn")
 
 
 func on_options_button_pressed():
