@@ -4,7 +4,11 @@ const SAVE_FILE_PATH = "user://game.save"
 
 var save_data: Dictionary = {
 	"meta_upgrade_currency": 0,
-	"meta_upgrades": {}
+	"meta_upgrades": {
+		"experience_gain": {
+			"quantity": 0
+		}
+	}
 }
 
 
